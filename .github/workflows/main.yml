@@ -32,11 +32,11 @@ jobs:
           Customer Artifacts.zip
         project_arn: ${{ secrets.AWS_PROJECT_ARN }}
         device_pool_arn: ${{ secrets.AWS_DEVICE_POOL_ARN }}
-        app_file: https://github.com/realm/aws-devicefarm-sample-data/releases/download/0.3/fi.aardsoft.devicefarmsample-debug.apk
+        app_file: https://github.com/Tessot/device-farm-github-action-test/raw/main/aws-devicefarm-sample-app.apk
         app_type: ANDROID_APP
         test_type: APPIUM_PYTHON
-        test_package_file: https://github.com/realm/aws-devicefarm-sample-data/releases/download/0.3/sample_env_python3.zip
+        test_package_file: https://github.com/Tessot/device-farm-github-action-test/raw/main/MySampleAndroidTests.zip
         test_package_type: APPIUM_PYTHON_TEST_PACKAGE
-        test_spec_file: https://github.com/realm/aws-devicefarm-sample-data/releases/download/0.3/test_spec.yaml
+        test_spec_file: https://github.com/Tessot/device-farm-github-action-test/raw/main/webdriverio_spec_file.yml
         test_spec_type: APPIUM_PYTHON_TEST_SPEC
         remote_src: true
