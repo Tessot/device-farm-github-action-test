@@ -34,9 +34,9 @@ jobs:
         device_pool_arn: ${{ secrets.AWS_DEVICE_POOL_ARN }}
         app_file: https://github.com/Tessot/device-farm-github-action-test/raw/main/aws-devicefarm-sample-app.apk
         app_type: ANDROID_APP
-        test_type: APPIUM_PYTHON
+        test_type: APPIUM_NODE
         test_package_file: https://github.com/Tessot/device-farm-github-action-test/raw/main/MySampleAndroidTests.zip
-        test_package_type: APPIUM_PYTHON_TEST_PACKAGE
+        test_package_type: APPIUM_NODE_TEST_PACKAGE
         test_spec_file: https://github.com/Tessot/device-farm-github-action-test/raw/main/webdriverio_spec_file.yml
-        test_spec_type: APPIUM_PYTHON_TEST_SPEC
+        test_spec_type: APPIUM_NODE_TEST_SPEC
         remote_src: true
