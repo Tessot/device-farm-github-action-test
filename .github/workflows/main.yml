@@ -48,3 +48,5 @@ jobs:
         echo "Upload ARN ${{ steps.testrun.outputs.arn}}"
         echo "Result code ${{ steps.testrun.outputs.result_code}}"
         echo "Upload Status ${{ steps.testrun.outputs.status}}"
+        echo "JSON data ${{ steps.testrun.outputs.data.downloaded_artifacts}}"
+        echo "JSON data ${{ steps.testrun.outputs.data['downloaded_artifacts']}}"
