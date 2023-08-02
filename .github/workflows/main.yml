@@ -25,6 +25,7 @@ jobs:
 
     - name: Schedule test run with mixed data
       uses: realm/aws-devicefarm/test-application@master
+      id: testrun
       with:
         name: schedule-run
         file_artifacts: |
@@ -40,3 +41,10 @@ jobs:
         test_spec_file: https://github.com/Tessot/device-farm-github-action-test/raw/main/webdriverio_spec_file.yml
         test_spec_type: APPIUM_NODE_TEST_SPEC
         remote_src: true
+        
+    - name: Get outputs 
+      run: | 
+        echo "JSON data ${{ steps.testrun.outputs.data}}"
+        echo "Upload ARN ${{ steps.testrun.outputs.arn}}"
+        echo "Result code ${{ steps.testrun.outputs.result_code}}"
+        echo "Upload Status ${{ steps.testrun.outputs.status}}"
