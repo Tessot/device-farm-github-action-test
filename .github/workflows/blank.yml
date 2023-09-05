@@ -24,7 +24,7 @@ jobs:
 
       - name: Schedule Device Farm Automated Test
         id: RunTest
-        uses: aws-actions/aws-devicefarm-automated-test@v1
+        uses: aws-actions/aws-devicefarm-automated-test@v0.1
         with:
           run-name: GitHubAction-${{ github.workflow }}_${{ github.run_id }}_${{ github.run_attempt }}
           run-settings-path: run-settings.json
